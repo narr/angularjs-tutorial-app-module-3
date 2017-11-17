@@ -4,4 +4,5 @@
 
 'use strict';
 
+import './phone-common';
 import './phone-detail';
