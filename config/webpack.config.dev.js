@@ -37,6 +37,9 @@ function webpackConfig() {
           'app',
         ],
       }),
+      new webpack.ProvidePlugin({
+        'window.jQuery': 'jquery',
+      }),
     ],
     module: {
       rules: [

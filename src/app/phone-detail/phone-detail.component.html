@@ -1,5 +1,10 @@
-<img ng-src="{{phoneDetailVm.mainImageUrl}}" class="phone"
-  alt="{{phoneDetailVm.phone.name}}">
+
+<div class="phone-images">
+  <img ng-repeat="img in phoneDetailVm.phone.images" ng-src="{{img}}"
+    class="phone phone-animation"
+    ng-class="{selected: img === phoneDetailVm.mainImageUrl}"
+    alt="{{phoneDetailVm.phone.name}}">
+</div>
 
 <h1>{{phoneDetailVm.phone.name}}</h1>
 
