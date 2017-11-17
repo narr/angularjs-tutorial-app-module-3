@@ -29,12 +29,19 @@ function PhoneDetailController(
   vm.$postLink = postLink;
 
   function init() {
+    vm.setImage = setImage;
+
     phoneDetailService.getPhoneData('json/' + vm.phoneId + '.json')
       .then(function (res) {
         vm.phone = res.data;
+        setImage(vm.phone.images[0]);
       });
   }
 
   function postLink() {}
+
+  function setImage(imageUrl) {
+    vm.mainImageUrl = imageUrl;
+  }
 
 }
